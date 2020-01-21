@@ -75,6 +75,7 @@ def add_task(name, hour, minute):
     tasks.append({"name": name, "time": {"hour": hour, "minute": minute}})
     return redirect("/")
 
+
 @app.route("/add_task_with_param/")
 def add_task_with_param():
     name = request.args.get('name')
@@ -82,5 +83,3 @@ def add_task_with_param():
     minute = request.args.get('minute')
     tasks.append({"name": name, "time": {"hour": hour, "minute": minute}})
     return redirect("/")
-
-

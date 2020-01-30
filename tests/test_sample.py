@@ -6,7 +6,7 @@ from time import sleep
 # Fixture for Firefox
 @pytest.fixture(scope="class")
 def driver_init(request):
-    web_driver = webdriver.Chrome("driver\\chromedriver.exe")
+    web_driver = webdriver.Chrome()
     request.cls.driver = web_driver
     yield
     web_driver.close()

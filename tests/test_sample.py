@@ -28,5 +28,5 @@ class Test_URL(BasicTest):
         self.driver.find_element_by_name("minute").send_keys(str_minute)
         self.driver.find_element_by_xpath("//input[@type='submit']").click()
         assert self.driver.find_element_by_xpath("/html/body/div[2]/table/tbody/tr[2]/td[1]").text == str_new_task_name
-        assert self.driver.find_element_by_xpath("/html/body/div[2]/table/tbody/tr[2]/td[2]").text == str_hour + ":" + str_minute
+        assert self.driver.find_element_by_xpath("/html/body/div[2]/table/tbody/tr[2]/td[2]").text == str_hour + ": " + str_minute
         sleep(5)
